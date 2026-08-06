@@ -14,11 +14,17 @@
             background: linear-gradient(135deg, #4a00e0, #8e2de2);
             color: white;
         }
-        h1 { color: #ffffff; }
-        img { 
-            max-width: 300px; 
-            margin-bottom: 20px; 
-            border-radius: 10px;
+
+        h1 { 
+            color: #ffffff; 
+            margin-top: 10px;
+        }
+
+        /* ⭐ Video stile logo */
+        video {
+            max-width: 320px;
+            border-radius: 12px;
+            margin-bottom: 20px;
             box-shadow: 0 0 20px rgba(255,255,255,0.3);
         }
 
@@ -43,9 +49,9 @@
 
         /* ⭐ Freccia dorata lampeggiante */
         .arrow {
-            font-size: 28px;
+            font-size: 32px;
             color: #ffd700;
-            margin-top: 10px;
+            margin-top: 15px;
             animation: blink 1s infinite;
         }
         @keyframes blink {
@@ -70,8 +76,8 @@
 </head>
 <body>
 
-    <!-- ⭐ IMMAGINE EROE DEL GIOCO -->
-    <img src="Super Busy.jpg" alt="Eroe del gioco">
+    <!-- ⭐ VIDEO DEL GIOCO (VERSIONE 2) -->
+    <video src="LEVEL2.mp4" autoplay loop muted></video>
 
     <h1>Super Gioco – Sito ufficiale</h1>
     <p>Questa è la pagina del publisher richiesta dal Solana dApp Store per la pubblicazione dell’app.</p>
@@ -84,7 +90,6 @@
     <!-- ⭐ FRECCIA DORATA LAMPEGGIANTE -->
     <div class="arrow">⬇️✨⬇️</div>
 
-    <!-- Testo esplicativo sotto la freccia -->
     <p>Avvia il gioco WebGL</p>
 
     <h2>Contatti</h2>
