@@ -7,47 +7,71 @@
     <style>
         body { 
             font-family: Arial, sans-serif; 
-            margin: 40px; 
+            margin: 0;
+            padding: 40px;
             line-height: 1.6; 
             text-align: center;
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+            color: white;
         }
-        h1 { color: #333; }
+        h1 { color: #ffffff; }
         img { 
             max-width: 300px; 
             margin-bottom: 20px; 
             border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
         }
 
         /* ⭐ Pulsante grande Gioca Ora */
         .play-button {
             display: inline-block;
-            background-color: #007bff;
-            color: white;
+            background-color: #00c3ff;
+            color: #000;
             padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 8px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 10px;
             text-decoration: none;
-            margin-top: 20px;
+            margin-top: 25px;
             transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
         }
         .play-button:hover {
-            background-color: #0056b3;
+            background-color: #00a0d1;
+            transform: scale(1.05);
+        }
+
+        /* ⭐ Freccia dorata lampeggiante */
+        .arrow {
+            font-size: 28px;
+            color: #ffd700;
+            margin-top: 10px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%   { opacity: 0; transform: translateY(0); }
+            50%  { opacity: 1; transform: translateY(5px); }
+            100% { opacity: 0; transform: translateY(0); }
         }
 
         a { 
-            color: #0066cc; 
+            color: #ffe600; 
             font-size: 18px; 
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
+
+        h2 {
+            color: #ffeb3b;
+        }
     </style>
 </head>
 <body>
 
-    <!-- ⭐ LOGO DEL GIOCO -->
-    <img src="Super Busy.jpg" alt="Logo Super Gioco">
+    <!-- ⭐ IMMAGINE EROE DEL GIOCO -->
+    <img src="Super Busy.jpg" alt="Eroe del gioco">
 
     <h1>Super Gioco – Sito ufficiale</h1>
     <p>Questa è la pagina del publisher richiesta dal Solana dApp Store per la pubblicazione dell’app.</p>
@@ -56,6 +80,12 @@
     <a class="play-button" href="https://play.unity.com/en/games/bcc4265b-fdb4-460a-9ec5-50490b540887/webgl-builds" target="_blank">
         🎮 Gioca Ora
     </a>
+
+    <!-- ⭐ FRECCIA DORATA LAMPEGGIANTE -->
+    <div class="arrow">⬇️✨⬇️</div>
+
+    <!-- Testo esplicativo sotto la freccia -->
+    <p>Avvia il gioco WebGL</p>
 
     <h2>Contatti</h2>
     <p>Email di supporto: <strong>krakocis@gmail.com</strong></p>
