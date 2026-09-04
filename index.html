@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Super Gioco – Sito ufficiale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         body { 
             font-family: Arial, sans-serif; 
@@ -62,6 +63,25 @@
         h2 {
             color: #ffeb3b;
         }
+
+        /* 🔐 Protezione immagini */
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-wrapper img.protect {
+            -webkit-user-select: none;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0);
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body>
@@ -76,14 +96,28 @@
 
     <p>Avvia il gioco WebGL</p>
 
+    <!-- 🔐 Esempio: se vuoi mostrare un'immagine protetta -->
+    <!-- Sostituisci LEVEL2.png con la tua immagine -->
+    <div class="image-wrapper">
+        <img src="LEVEL2.png" class="protect">
+        <div class="image-overlay"></div>
+    </div>
+
     <h2>Contatti</h2>
-    <p>Email di supporto: <strong>grigioamabile@gmail.com</strong></p><!-- update -->
+    <p>Email di supporto: <strong>grigioamabile@gmail.com</strong></p>
 
     <h2>Documenti</h2>
     <p><a href="privacy.html">Informativa sulla Privacy</a></p>
     <p><a href="terms.html">Termini e Condizioni</a></p>
 
     <p>© 2026 Super Gioco</p>
+
+    <!-- 🔐 Blocco tasto destro, drag, selezione -->
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('dragstart', event => event.preventDefault());
+        document.addEventListener('selectstart', event => event.preventDefault());
+    </script>
 
 </body>
 </html>
